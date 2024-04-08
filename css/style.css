@@ -1,0 +1,69 @@
+/* Atributos globales del proyecto, Letra de Google Font, tamaño y estilo, ademas del fondo gris */
+body {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #f5f5f5;
+}
+
+/* Container que agrupa contenido principal, lo pintamos del fondo */
+
+.container{
+    background-color: #f5f5f5;
+}
+
+/* Propiedades de la Barra para cumplir con el proposito de la formativa */
+/* Marcamos con css para que la barra funcione como links */
+.nav-link h3, .nav-link h4{ 
+    text-decoration: underline;
+}
+/* Al posicionar el mouse cambiamos a negrita sin subrayado */
+.nav-link h3:hover, .nav-link h4:hover{ 
+    text-decoration: none;
+    font-weight:bold;
+}
+
+/* Cambiamos el fondo de los articulos a blanco */
+
+table {
+    background-color: white;
+}
+
+/* Aqui cambiamos el color al tener el mouse encima de un articulo especifico */
+
+td:hover{
+    background-color: black;
+    color:white;
+    
+}
+
+/* Propiedades que ordena segun la resolucion de la pantalla vista el sitio */
+
+tbody{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+    tbody {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Propiedades del pie de pagina diferenciadas */
+
+footer{
+    background-color: #c9d2d0;
+    color:#31231e;
+    padding: 50px 0 30px ;
+    text-align: center;
+}
+
+
+
+
+
+
+
