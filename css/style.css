@@ -45,7 +45,7 @@ tbody{
     grid-template-columns: repeat(1, 1fr);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     tbody {
         grid-template-columns: repeat(3, 1fr);
     }
