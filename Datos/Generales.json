@@ -1,0 +1,16 @@
+[
+        {"Titulo":"Sueldo de hasta $1,7 millones: Carabineros ofrece 67 puestos de trabajo para civiles.",
+         "Categoria": "Nacional",
+         "Contenido":"Carabineros de Chile publicó nuevas ofertas de trabajo para desempeñarse en distintos puestos al interior de la policía uniformada. <br> Según informó la institución, en total serán 67 plazas con sueldos que pueden llegar hasta los $1,7 millones brutos. <br> El período de postulación ya está vigente, extendiéndose hasta el 29 de marzo de 2024.",
+         "Imagen":"image/imagen carabineros1.jpg",
+         "Video": "video/flayte predicador.mp4"},
+         {"Titulo":"Destapan red de “narco-profesionales” de poderoso traficante del Biobío: Hay contadores,ingenieros y hasta un empresario.",
+          "Categoria":"Nacional",
+          "Contenido":"Una completa red de profesionales habría logrado construir “El Palta”, poderoso líder narcotraficante cuya organización fue desbaratada hace unos días en las regiones del Biobío y Ñuble. <br> Jorge Espinosa Zapata, de 35 años, ha sido sindicado como uno de los más grandes traficantes de la zona, operando principalmente desde la comuna de Hualpén. Fue capturado el jueves de la semana pasada junto a otros 23 presuntos miembros de la banda.",
+          "Imagen":"image/imagen impacto2.jpg",
+          "Audio":"audio/En Recoleta.mp3"},
+         {"Titulo":"¡Anda ofuscado!”: Sergio Bitar enfurece y renuncia en vivo al programa de Checho Hirane.",
+          "Categoria":"Tendencias",
+          "Contenido":"Un nuevo altercado que termina en renuncia se vivió en Conectados, el programa de Checho Hirane en Radio Agricultura. Esta vez, el exministro Sergio Bitar (PPD) perdió la paciencia y se fue para no regresar más. <br> En medio del programa de este martes, el economista Mikel Uriarte interrumpió porfiadamente a Bitar, lo que terminó por hacer explotar al político.",
+          "Imagen":"image/imagen polemica.jpg"}
+]
