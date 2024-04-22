@@ -1,79 +1,113 @@
 async function CargarArticulos(){
     /// Carga Inicial
-    var archivo = await fetch("Datos/Generales.json");
+
+    var archivo = await fetch("Datos/Portada.json");
     var datajson=await archivo.json();   
 
-    var tabla=document.querySelector("#General");
+    // Identificamos en el Selector del codigo Html para posicionar la inyeccion del Codigo
+    var tabla=document.querySelector("#Portada");
     var html='';
+    var html2='';
     var num=0;
     var tnum=0;
+    // Iteramos los datos del .json
     for(var i in datajson)
     {
         num+=1;
-        html='<td class="I_General"><h4>'+ datajson[i].Titulo +'</h4><h5 align="center">'+ datajson[i].Categoria +'</h5><p>'+ datajson[i].Contenido +'</p><img class="img-fluid" src="'+ datajson[i].Imagen +'">';
-        if (datajson[i].Video!==undefined){
-            html+='<video class="mt-3" width="320" height="240" controls=""><source src="'+ datajson[i].Video +'">Tu navegador no soporta el elemento de video.</video><h5>Carabineros atrapan a: "flayte predicador"</h5>';
+        // Completamos el codigo html estructurando el codigo como string insertando los datos del .json
+        if (i=1){
+            html='<h2 class="I_General"><b>' + datajson[i-1].Titulo + '</b></h2><h5>' + datajson[i-1].Contenido + '</h5><img class="img-fluid img-1" src="'+ datajson[i-1].Imagen + '">'
+            tabla=document.querySelector("#Principal")
+            tabla.innerHTML=html;
         }
-        if(datajson[i].Audio!==undefined){
-            html+='<audio class="mt-3" controls=""><source src="'+ datajson[i].Audio +'">Tu navegador no soporta el elemento de audio.</audio>';
+        if (i=2){
+            html='<h6 class="I_General"><b>' + datajson[i-1].Contenido + '</b></h6><img class="img-fluid img-2" src="'+ datajson[i-1].Imagen + '">'
+            tabla=document.querySelector("#Contenido_1")
+            tabla.innerHTML=html;
         }
-        html+='</td>'
-        tabla.insertRow(-1).innerHTML=html;
+        if (i=3){
+            html='<h6 class="I_General"><b>' + datajson[i-1].Contenido + '</b></h6><img class="img-fluid img-3" src="'+ datajson[i-1].Imagen + '">'
+            tabla=document.querySelector("#Contenido_2")
+            tabla.innerHTML=html;
+        }
+        
+        if (num>3){
+            html2+='<div class="col-lg-3 mt-2 item I_General"><a href="'+ datajson[num-1].Link +'"><h6><b>' + datajson[num-1].Titulo + '</b></h6></a><img class="img-fluid img-n" src="' + datajson[num-1].Imagen + '"></div>'    
+        }
     }
+    var Items=document.querySelector("#Items");
+        Items.innerHTML=html2;
+
+    // Creamos un nuevo Elemento y identificamos la seccion para insertar la cantidad de Articulos
     var seccion=document.querySelector("#inicio");
     var numero=document.createElement("div");
     numero.textContent="Cantidad de Articulos: " + num;
-    numero.classList="Cant";
+    numero.classList="Cant mt-2";
+    // Marcamos el nuevo elemto con un id para modificarlo mas tarde
     numero.setAttribute("id", "C_General");
     tnum+=num;
+    // Insertamos el nuevo codigo .html al pie de la seccion contenedora de la tabla con la cantidad de los articulos
     seccion.appendChild(numero);
-    
-    // Carga Deportes
-    
-    archivo = await fetch("Datos/Deportes.json");
-    datajson=await archivo.json();   
 
-    tabla=document.querySelector("#Deporte");
+    // Cargamos Seccion Nacional
+
+    archivo = await fetch("Datos/Nacional.json");
+    datajson=await archivo.json();   
     html='';
     num=0;
+
     for(var i in datajson)
     {
         num+=1;
-        html='<td class="I_Deportes"><h4>'+ datajson[i].Titulo +'</h4><h5 align="center">'+ datajson[i].Categoria +'</h5><p>'+ datajson[i].Contenido +'</p><img class="img-fluid" src="'+ datajson[i].Imagen +'">';
-        html+='</td>'
-        tabla.insertRow(-1).innerHTML=html;
+        // Completamos el codigo html estructurando el codigo como string insertando los datos del .json
+        
+        html+='<div class="col-lg-4 mt-2 item I_Nacional"><a href="'+ datajson[i].Link +'"><h6><b>' + datajson[i].Titulo + '</b></h6></a><img class="img-fluid img-n" src="' + datajson[i].Imagen + '"></div>'    
+        
     }
-    seccion=document.querySelector("#deportes");
-    numero=document.createElement("p");
+
+    Items=document.querySelector("#Nacional")
+    Items.innerHTML=html;
+
+    seccion=document.querySelector("#Nacionales");
+    numero=document.createElement("div");
     numero.textContent="Cantidad de Articulos: " + num;
-    numero.classList="Cant"
-    numero.setAttribute("id", "C_Deporte");
+    numero.classList="Cant mt-2";
+    // Marcamos el nuevo elemto con un id para modificarlo mas tarde
+    numero.setAttribute("id", "C_Nacional");
     tnum+=num;
-
+    // Insertamos el nuevo codigo .html al pie de la seccion contenedora de la tabla con la cantidad de los articulos
     seccion.appendChild(numero);
+    
+    // Cargamos Seccion Internacional
 
-    archivo = await fetch("Datos/Negocios.json");
+    archivo = await fetch("Datos/Internacional.json");
     datajson=await archivo.json();   
-
-    tabla=document.querySelector("#Negocio");
     html='';
     num=0;
+
     for(var i in datajson)
     {
         num+=1;
-        html='<td class="I_Negocios"><h4>'+ datajson[i].Titulo +'</h4><h5 align="center">'+ datajson[i].Categoria +'</h5><p>'+ datajson[i].Contenido +'</p><img class="img-fluid" src="'+ datajson[i].Imagen +'">';
-        html+='</td>'
-        tabla.insertRow(-1).innerHTML=html;
+        // Completamos el codigo html estructurando el codigo como string insertando los datos del .json
+        
+        html+='<div class="col-lg-4 mt-2 item I_Internacional"><a href="'+ datajson[i].Link +'"><h6><b>' + datajson[i].Titulo + '</b></h6></a><img class="img-fluid img-n" src="' + datajson[i].Imagen + '"></div>'    
+    
     }
-    seccion=document.querySelector("#negocios");
-    numero=document.createElement("p");
+
+    Items=document.querySelector("#Internacional")
+    Items.innerHTML=html;
+
+    seccion=document.querySelector("#Internacionales");
+    numero=document.createElement("div");
     numero.textContent="Cantidad de Articulos: " + num;
-    numero.classList="Cant";
-    numero.setAttribute("id", "C_Negocio");   
+    numero.classList="Cant mt-2";
+    // Marcamos el nuevo elemto con un id para modificarlo mas tarde
+    numero.setAttribute("id", "C_Internacional");
     tnum+=num;
-    
+    // Insertamos el nuevo codigo .html al pie de la seccion contenedora de la tabla con la cantidad de los articulos
     seccion.appendChild(numero);
-    
+
+
     seccion=document.querySelector("#Pie");
     numero=document.createElement("h5");
     numero.textContent="Cantidad de Articulos: " + tnum;
