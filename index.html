@@ -36,48 +36,46 @@
 
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto"> <!-- clase "ms-auto" para alinear los elementos a la derecha -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#inicio">
-                        <h6>Ultimas Noticias</h6>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Nacionales">
-                        <h6>Nacionales</h6>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Internacionales">
-                        <h6>Internacional</h6>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <form class="titulo_reloj" name="form_reloj">
-                        <input class="reloj" type="text" disabled="true" name="reloj" size="40" align="center">
-                    </form>
-                </li>
-            </ul>
-
-        </div>
-    </div>
-</nav>
 
 <body onload="mueveReloj(), CargarArticulos()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <!-- clase "ms-auto" para alinear los elementos a la derecha -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">
+                            <h6>Ultimas Noticias</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Nacionales">
+                            <h6>Nacionales</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Internacionales">
+                            <h6>Internacional</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="titulo_reloj" name="form_reloj">
+                            <input class="reloj" type="text" disabled="true" name="reloj" size="40" align="center">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
     <!--estructura del cuerpo de un sitio-->
     <!--encabezado-->
     <!--Contenedor donde esta el Cuerpo-->
     <div class="container">
         <header>
-            <h1 class="titulo-llamativo" align="center">El Faro</h1>
+            <h1 align="center"> <img src="image/simbolo el faro.jpg" class="img-fluid"></h1>
             <!-- Contenedor de noticias -->
             <!-- Línea separadora -->
             <hr>
@@ -102,8 +100,7 @@
         <div style="margin-bottom: 2rem;">
             <a href="https://www.entel.cl"><img src="image/publicidad.png" class="img-fluid mt-3"></a>
         </div>
-        
-        
+        <hr>
         <!--barra de navegacion-->
         <section id="inicio">
             <!-- Contenido de la sección de Inicio -->
